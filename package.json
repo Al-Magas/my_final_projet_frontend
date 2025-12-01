@@ -36,4 +36,11 @@
       "last 1 safari version"
     ]
   }
+  ,
+  "homepage": "https://github.com/Al-Magas/my_final_projet_frontend.git",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+
 }
