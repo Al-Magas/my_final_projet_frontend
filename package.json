@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
      "predeploy": "npm run build",
    "deploy": "gh-pages -d build",
-    "homepage": "https://github.com/Al-Magas/my_final_projet_frontend.git"
+    "homepage": " "
   },
   "eslintConfig": {
     "extends": [
