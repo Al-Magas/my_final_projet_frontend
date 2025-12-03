@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --- HEADER --- */
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background: #fff;
+}
+
+header img {
+  width: 150px;
+}
+
+/* --- NAVBAR --- */
+nav {
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* --- MAIN SECTION (Hero) --- */
+main {
+  padding: 20px;
+}
+
+.primaryCard:first-child {
+  background-color: #5f6f63;
   color: white;
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.primaryCard:first-child img {
+  width: 40%;
+  border-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.primaryCard:first-child h2 {
+  font-size: 40px;
+  color: #f2c200;
 }
+
+.primaryCard:first-child button {
+  background-color: #f2c200;
+  color: black;
+  padding: 12px 25px;
+  border: none;
+  width: 200px;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- LES PLATS DE LA SEMAINE --- */
+.primaryCard:nth-of-type(2) h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.primaryCard:nth-of-type(2) {
+  margin-top: 40px;
+}
+
+.primaryCard:nth-of-type(2) button {
+  background-color: #f2c200;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Secondary product cards */
+.secondaryCard {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.secondaryCard img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.secondaryCard h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.secondaryCard h4 {
+  color: red;
+  font-weight: bold;
+}
+
+/* Display 3 cards horizontally */
+.primaryCard:nth-of-type(2) .secondaryCard {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* --- Témoignages --- */
+.secondaryCard2 {
+  background-color: #eee;
+  padding: 15px;
+  margin: 10px 0;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.secondaryCard2 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #f2c200;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+footer div img {
+  width: 120px;
+}
+
+footer h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+

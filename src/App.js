@@ -4,14 +4,19 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Reservations from './components/Reservations';
+import { BrowserRouter } from "react-router-dom";
+
 
 function App() {
   return (
     <>
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Nav />
+        <Main />
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
