@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Reservations from './components/Reservations';
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter  } from "react-router-dom";
 import Presentation from './components/Presentation';
 import Menu from './components/Menu';
 
@@ -13,14 +13,14 @@ import Menu from './components/Menu';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Nav />
         <Main />
         <Presentation/>
         <Menu/>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
