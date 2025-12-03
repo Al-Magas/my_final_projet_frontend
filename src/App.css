@@ -1,166 +1,212 @@
 /* RESET */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
 
+/* COLOR VARIABLES */
+:root {
+  --yellow: #F4CE14;
+  --green: #495E57;
+  --light: #EDEFEE;
+  --dark: #333333;
+}
+
 /* --- HEADER --- */
 header {
   display: flex;
   align-items: center;
-  padding: 20px;
-  background: #fff;
+  padding: 20px 40px;
+  background: white;
+  border-bottom: 1px solid #ddd;
 }
 
 header img {
-  width: 150px;
+  width: 160px;
 }
 
 /* --- NAVBAR --- */
 nav {
   background-color: white;
-  padding: 10px 20px;
-  border-bottom: 1px solid #eee;
+  padding: 15px 40px;
 }
 
 nav ul {
   display: flex;
-  gap: 25px;
   list-style: none;
+  gap: 35px;
   justify-content: center;
 }
 
 nav a {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
-  font-weight: 500;
+  color: var(--dark);
+  font-size: 17px;
+  font-weight: bold;
 }
 
-/* --- MAIN SECTION (Hero) --- */
+nav a:hover {
+  color: var(--yellow);
+}
+
+/* --- MAIN --- */
 main {
-  padding: 20px;
+  padding: 40px;
 }
 
-.primaryCard:first-child {
-  background-color: #5f6f63;
+/* --- HERO (Présentation) --- */
+.primaryCard.hero {
+  background-color: var(--green);
   color: white;
-  padding: 40px;
-  border-radius: 10px;
+  padding: 50px;
+  border-radius: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.primaryCard:first-child img {
-  width: 40%;
-  border-radius: 12px;
-}
-
-.primaryCard:first-child h2 {
-  font-size: 40px;
-  color: #f2c200;
-}
-
-.primaryCard:first-child button {
-  background-color: #f2c200;
-  color: black;
-  padding: 12px 25px;
-  border: none;
-  width: 200px;
-  border-radius: 20px;
-  margin-top: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* --- LES PLATS DE LA SEMAINE --- */
-.primaryCard:nth-of-type(2) h2 {
-  font-size: 24px;
+.primaryCard.hero h2 {
+  font-size: 45px;
+  color: var(--yellow);
   margin-bottom: 10px;
 }
 
-.primaryCard:nth-of-type(2) {
-  margin-top: 40px;
+.primaryCard.hero p {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.primaryCard:nth-of-type(2) button {
-  background-color: #f2c200;
-  padding: 10px 20px;
+.primaryCard.hero button {
+  background-color: var(--yellow);
   border: none;
-  border-radius: 20px;
+  padding: 14px 30px;
+  border-radius: 25px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  width: 200px;
 }
 
-/* Secondary product cards */
-.secondaryCard {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 250px;
+.primaryCard.hero button:hover {
+  background-color: #e3bf10;
 }
 
-.secondaryCard img {
+.primaryCard.hero img {
+  width: 40%;
+  margin-left: 150px;
+  border-radius: 12px;
+}
+
+/* --- SECTIONS TITLES --- */
+.section-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: var(--dark);
+}
+
+/* --- SECONDARY CARDS (Plat / Temoignages) --- */
+.secondaryCard,
+.secondaryCard2 {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  width: 260px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.secondaryCard img,
+.secondaryCard2 img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-.secondaryCard h3 {
+.secondaryCard h3,
+.secondaryCard2 h3 {
   font-size: 18px;
   margin-top: 10px;
 }
 
 .secondaryCard h4 {
   color: red;
+  margin-top: 5px;
+  font-size: 17px;
   font-weight: bold;
 }
 
-/* Display 3 cards horizontally */
-.primaryCard:nth-of-type(2) .secondaryCard {
-  display: inline-block;
-  margin-right: 20px;
+/* --- FORMULAIRE --- */
+form {
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  background: var(--light);
+  padding: 25px;
+  border-radius: 12px;
+  width: 280px;
+}
+.reservationHeader {
+  text-align: center;     /* Centre tout le texte */
+  margin-bottom: 25px;    /* Ajoute un espace avec le formulaire */
 }
 
-/* --- Témoignages --- */
-.secondaryCard2 {
-  background-color: #eee;
-  padding: 15px;
-  margin: 10px 0;
-  width: 250px;
-  border-radius: 10px;
+.reservationHeader h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--dark);
+  margin-bottom: 5px;
 }
 
-.secondaryCard2 img {
-  width: 100%;
-  border-radius: 10px;
+.reservationHeader p {
+  font-size: 16px;
+  color: #555;
 }
 
-/* --- Footer --- */
+form input,
+form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+form input[type="submit"]:disabled {
+  background: #aaa;
+}
+
+/* --- FOOTER --- */
 footer {
-  background-color: #f2c200;
-  padding: 40px;
+  background-color: var(--yellow);
+  padding: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin-top: 40px;
+  gap: 40px;
 }
 
-footer div img {
+footer img {
   width: 120px;
 }
 
 footer h2 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 footer p {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
-
+.primaryCard:nth-of-type(2) {
+  text-align: center; /* centre tout le contenu */
+}

@@ -2,11 +2,10 @@ import { Routes, Route, useNavigate  } from "react-router-dom";
 import { useReducer } from "react";
 import Accueil from "./Accueil";
 import Apropos from "./Apropos";
-import Menu from "./Menu";
-import Reservations from "./Reservations";
-import Temoignage from "./Temoignage";
+import Menu from "./Menu";import Reservations from "./Reservations";
 import { fetchAPI, submitAPI } from "./Api"; // corrige le chemin selon ton projet
 import ConfirmationReservation from "./ConfirmationReservation";
+import App from "../App";
 
 // --- Reducer ---
 export function initializeTimes() {
@@ -39,7 +38,7 @@ function Main() {
   return (
     <main>
       <Routes>
-        <Route path="/" element={<Accueil />} />
+        <Route path="/app" element={<App />} />
         <Route path="/apropos" element={<Apropos />} />
         <Route path="/menu" element={<Menu />} />
         <Route
@@ -51,8 +50,7 @@ function Main() {
          <Route
           path="/reservation-confirmed"
           element={<ConfirmationReservation />}
-        />
-        <Route path="/temoignage" element={<Temoignage />} />
+         />
       </Routes>
     </main>
   );

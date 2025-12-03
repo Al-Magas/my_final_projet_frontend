@@ -6,6 +6,8 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Reservations from './components/Reservations';
 import { BrowserRouter } from "react-router-dom";
+import Presentation from './components/Presentation';
+import Menu from './components/Menu';
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Header />
         <Nav />
         <Main />
+        <Presentation/>
+        <Menu/>
         <Footer />
       </BrowserRouter>
     </>

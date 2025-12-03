@@ -2,7 +2,7 @@ import Formulaire from "./Formulaire";
 
 function Reservations({ availableTimes, dispatch,submitForm }) {
     return (
-        <div>
+        <div className="reservationHeader">
             <h2>Réservez une table</h2>
             <Formulaire
                 availableTimes={availableTimes}
